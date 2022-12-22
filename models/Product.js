@@ -13,20 +13,20 @@ Product.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      // ADD NOT NULL
+      allowNull: false,
     },
     product_name: {
       type: DataTypes.STRING,
-      // ADD NOT NULL
+      allowNull: false,
     },
     price: {
       type: DataTypes.DECIMAL,
-      // ADD NOT NULL
+      allowNull: false,
       // validation that value = decimal
     },
     stock: {
       type: DataTypes.INTEGER,
-      // ADD NOT NULL
+      allowNull: false,
       // validation that value = numeric
       // SET default value = 10
     },
