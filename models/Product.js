@@ -22,17 +22,27 @@ Product.init(
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
-      // validation that value = decimal
+      validate: {
+        isDecimal: true,
+      },
     },
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      // validation that value = numeric
-      // SET default value = 10
+      validate: {
+        isNumeric: true,
+      },
+      defaultValue: "10",
+      // CHECK THIS TO ENSURE CORRECT FORMAT ^^
+      // found https://stackoverflow.com/questions/36187952/sequelize-defaultvalue-not-getting-set
     },
     category_id: {
       type: DataTypes.INTEGER,
-      // REFERENCE CATEGORY MODEL ID
+      references: {
+        // This references the `category` model, which we set in `Category.js` as its `modelName` property
+        model: "category",
+        key: "id",
+      },
     },
   },
   {
