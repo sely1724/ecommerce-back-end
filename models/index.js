@@ -19,6 +19,7 @@ Category.hasMany(Product, {
 //https://sequelize.org/api/v6/class/src/associations/belongs-to-many.js~belongstomany
 Product.belongsToMany(Tag, {
   through: ProductTag,
+  // do i need a fk?
   // onDelete??
 });
 
@@ -26,6 +27,7 @@ Product.belongsToMany(Tag, {
 Tag.belongsToMany(Product, {
   through: ProductTag,
   // onDelete??
+  // do i need a fk?
 });
 
 module.exports = {
@@ -34,23 +36,3 @@ module.exports = {
   Tag,
   ProductTag,
 };
-
-Driver.hasOne(License, {
-  foreignKey: "driver_id",
-  onDelete: "CASCADE",
-});
-
-License.belongsTo(Driver, {
-  foreignKey: "driver_id",
-});
-
-// Define a Driver as having many Cars, thus creating a foreign key in the `car` table
-Driver.hasMany(Car, {
-  foreignKey: "driver_id",
-  onDelete: "CASCADE",
-});
-
-// The association can also be created from the Car side
-Car.belongsTo(Driver, {
-  foreignKey: "driver_id",
-});
