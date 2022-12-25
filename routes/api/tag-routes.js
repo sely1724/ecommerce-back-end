@@ -86,3 +86,5 @@ router.delete("/:id", async (req, res) => {
 });
 
 module.exports = router;
+
+// looking at sum of products related to it? Not specific products
