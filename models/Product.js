@@ -32,8 +32,8 @@ Product.init(
       validate: {
         isNumeric: true,
       },
-      defaultValue: "10",
-      // CHECK THIS TO ENSURE CORRECT FORMAT ^^
+      defaultValue: 10,
+      // CHECK THIS TO ENSURE CORRECT FORMAT ^^ // or test if it matters if num or string.  probs num or integer.
       // found https://stackoverflow.com/questions/36187952/sequelize-defaultvalue-not-getting-set
     },
     category_id: {

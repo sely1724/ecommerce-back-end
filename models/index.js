@@ -10,7 +10,9 @@ Product.belongsTo(Category, {
 });
 
 // Categories have many Products
-Category.hasMany(Product);
+Category.hasMany(Product, {
+  foreignKey: "category_id",
+});
 
 // Products belongToMany Tags (through ProductTag)
 //https://sequelize.org/api/v6/class/src/associations/belongs-to-many.js~belongstomany
