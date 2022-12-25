@@ -51,7 +51,7 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  // update a category by its `id` value
+  e;
 
   try {
     const updateCategory = await Category.update(req.body, {
@@ -82,7 +82,7 @@ router.delete("/:id", async (req, res) => {
       res.status(404).json({ message: "No user found with this id!" });
       return;
     }
-    res.status(200).json(locationData);
+    res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
   }
