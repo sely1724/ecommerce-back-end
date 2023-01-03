@@ -40,7 +40,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   // create a new category
   try {
-    const newCategory = await Category.create({
+    const newCategory = Category.create({
       //id not needed because auto-increment.
       category_name: req.body.category_name,
     });
@@ -49,6 +49,12 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
+/* req.body should look like this...
+    
+ {
+      "category_name": "Jorts",
+    }
+  */
 
 router.put("/:id", async (req, res) => {
   try {
@@ -58,11 +64,13 @@ router.put("/:id", async (req, res) => {
       },
       //if a category has a certain ID, change the ncaame?
     });
-    if (!updateCategory[0]) {
-      res.status(404).json({ message: "No user with this id!" });
-      return;
-    }
     res.status(200).json(updateCategory);
+
+    // if (!updateCategory[0]) {
+    //   res.status(404).json({ message: "No user with this id!" });
+    //   return;
+    // }
+    //res.status(200).json(updateCategory);
   } catch (err) {
     res.status(500).json(err);
   }
