@@ -18,34 +18,27 @@
 
 ## Description
 
-Your task is to build the back end for an e-commerce site by modifying starter code. You’ll configure a working Express.js API to use Sequelize to interact with a MySQL database.
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
+This application, with the main user being a manager at an internet retail company, provides the back end for an e-commerce site. The latest technologies including Express.js and Sequelize are leveraged so that this company with other e-comm companies.
 
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in Insomnia for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
+In terms of the application itself, once set up, the user is able to test the functionality via Insomnia. There is no front end, so they can't visit a Heroku site, but testing via Insomnia will let them fetch, create, update, and delete product/tag/category data.
 
 ## Installation
 
-create env file with personal mysql pw information
-get on right database `use ecommerce_db`
-seed DB with `npm run seed`
-connect to server with `npm i`
-use insomnia to test
-disconnect from server with `^c`
+In order to use this application, you'll need to follow these steps:
+
+```
+1. Clone the github repository using the command `git clone git@github.com:sely1724/ecommerce-back-end.git`
+2. Install npm by entering `npm init` into the terminal.
+3. Run `npm i` to download all applications in the package.json folder.
+4. Create a .env file with the database name (`ecommerce_db`), MySQL username, and MySQL password
+5. Enter schema and seed commands including navigating to right database with `use ecommerce_db` and seeding the database with `npm run seed`
+6. Connect to server with `npm start`
+7. Use Insomnia to test
+```
 
 ## Screencastify
 
-`CHANGE THIS LINK!!`
+`CHANGE THIS LINK!! SYLVIA `
 
 https://drive.google.com/file/d/1_aeI5nOpC8oFLCUPsXRdS-YI-oWHfK26/view
 
@@ -70,6 +63,8 @@ GitHub: https://github.com/sely1724
 
 Email: sylvianne9417@gmail.com
 
+## DELETE ONCE READY
+
 - The walkthrough video must demonstrate how to create the schema from the MySQL shell.
 
 - The walkthrough video must demonstrate how to seed the database from the command line.
@@ -82,32 +77,6 @@ Email: sylvianne9417@gmail.com
 
 - The walkthrough video must demonstrate POST, PUT, and DELETE routes for categories, products, and tags being tested in Insomnia.
 
-### Technical Acceptance Criteria: 40%
-
-- Satisfies all of the preceding acceptance criteria plus the following:
-
-  - Connects to a MySQL database using the [MySQL2](https://www.npmjs.com/package/mysql) and [Sequelize](https://www.npmjs.com/package/sequelize) packages.
-
-  - Stores sensitive data, like a user’s MySQL username, password, and database name, using environment variables through the [dotenv](https://www.npmjs.com/package/dotenv) package.
-
-  - Syncs Sequelize models to a MySQL database on the server start.
-
-  - Includes column definitions for all four models outlined in the Challenge instructions.
-
-  - Includes model associations outlined in the Challenge instructions.
-
-### Repository Quality: 13%
-
-- Repository has a unique name.
-
-- Repository follows best practices for file structure and naming conventions.
-
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages.
-
-- Repository contains quality readme with description and a link to a walkthrough video.
-
 ## Review
 
 You are required to submit BOTH of the following for review:
@@ -115,7 +84,3 @@ You are required to submit BOTH of the following for review:
 - A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
 
 - The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
----
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
