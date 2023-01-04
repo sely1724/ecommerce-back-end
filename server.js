@@ -14,5 +14,3 @@ app.use(routes);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
-
-//TO DO: DUPLICatE CATEGORY_ID RENAMED TOO - error is found in select statement below

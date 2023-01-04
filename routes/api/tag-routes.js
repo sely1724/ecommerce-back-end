@@ -56,6 +56,10 @@ router.post("/", async (req, res) => {
   }
 });
 
+// {
+//   "tag_name": "school",
+// }
+
 router.put("/:id", async (req, res) => {
   try {
     const updateTag = await Tag.update(req.body, {
