@@ -38,9 +38,7 @@ In order to use this application, you'll need to follow these steps:
 
 ## Screencastify
 
-`CHANGE THIS LINK!! SYLVIA `
-
-https://drive.google.com/file/d/1_aeI5nOpC8oFLCUPsXRdS-YI-oWHfK26/view
+https://drive.google.com/file/d/10grAk9rT30yaqwKKpHGW5vwYKjAn-BIN/view
 
 ## License
 
